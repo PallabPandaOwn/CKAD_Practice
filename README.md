@@ -34,3 +34,17 @@ DNS url - : db-service.dev.svc.cluster.local
         -   
 
   While you would be working mostly the declarative way – using definition files, imperative commands can help in getting one time tasks done quickly, as well as generate a definition template easily. This would help save considerable amount of time during your exams.
+
+
+## Scheduling
+ 1. Manual Scheduling - if there are no scheduler is running
+ 2. If Scheduler is running then it will select the correct pod for pod.
+
+## Taint and Toleration
+1.  Taint will be setup on Node and Toleration will be setup in pod 
+
+    -  kubectl taint node <name> key=values:effect
+       1. kubectl taint node node1 spray=mosquito:NoSchedule
+       2. kubectl get pod --watch
+       3. kubectl taint node node1 spray=mosquito:NoSchedule--
+
